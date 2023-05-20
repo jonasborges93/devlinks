@@ -8,6 +8,8 @@
   --highlight-color: rgba(255, 255, 255, 0.2);
   --bg-url: url("./assets/bg-mobile.jpg");
   --switch-bg-url: url("./assets/moon-stars.svg");
+
+  --bg-event-color: rgba(0, 0, 0, 0.2);
 }
 
 .light {
@@ -18,6 +20,8 @@
   --highlight-color: rgba(0, 0, 0, 0.1);
   --bg-url: url("./assets/bg-mobile-light.png");
   --switch-bg-url: url("./assets/sun.svg");
+
+  --bg-event-color: rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 700px) {
@@ -55,13 +59,13 @@ body {
   max-width: 588px;
   width: 92%;
 }
-
 .profile,
 .buttons,
 .social-link {
   padding-bottom: 32px;
 }
 
+.event,
 .profile {
   text-align: center;
 }
@@ -141,7 +145,23 @@ body {
   -webkit-backdrop-filter: blur(4px);
   border-radius: 9999px;
 }
-
+.event {
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  width: 100%;
+  margin: 0 auto 32px;
+  padding: 32px;
+  background-color: var(--bg-event-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.event h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+.event > p {
+  margin-bottom: 16px;
+}
 .list-item:not(:last-child) {
   margin-bottom: 16px;
 }
