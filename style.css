@@ -155,12 +155,36 @@ body {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 }
+
+@media (max-width: 767px) {
+  .event {
+    padding: 24px;
+  }
+}
 .event h3 {
   font-size: 20px;
   margin-bottom: 16px;
 }
+.event > img {
+  width: 80%;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 767px) {
+  .event > img {
+    width: 100%;
+  }
+}
+
 .event > p {
   margin-bottom: 16px;
+}
+@media (max-width: 767px) {
+  .event > p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
 }
 .list-item:not(:last-child) {
   margin-bottom: 16px;
@@ -180,7 +204,7 @@ body {
   font-weight: 500;
   line-height: 24px;
 
-  transition: background 0.2s;
+  transition: background-color 0.2s;
 }
 
 .list-link:hover {
@@ -201,7 +225,7 @@ body {
   text-decoration: none;
 
   border-radius: 50%;
-  transition: background 0.2s;
+  transition: background-color 0.2s;
 }
 
 .social-link-link:hover {
